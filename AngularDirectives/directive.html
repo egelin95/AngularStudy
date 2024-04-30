@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myAppike">
+
+    <asd></asd>
+    <script>
+        var app = angular.module("myAppike",[]);
+        app.directive("asd", function(){
+return{
+template:"<h1>Kasutame directive-it</h1>"
+};
+        });
+    </script>
+</body>
+</html>

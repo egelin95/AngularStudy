@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <!-- ng-app  - kasutame angulari ühendust selles vaates,
+         cntrl k ja c kommentiks tegemine -->
+    <div ng-app="" ng-init="quantity=1;cost=4;firstName='Asd'; lastName='Qwerty'"
+     >
+        <!-- Expression lahendab sulgude sees oleva asja, ja annab vastuse.
+        Need võivad sisaldada operaatoreid, ja muutujaid. angular on js baasil -->
+
+<p>Expression: {{5 + 5}}</p>
+<p>Total in euros: {{quantity * cost}}</p>
+<p>The name is {{firstName + " " + lastName}}</p>
+<p> kasutame ng-bind</p>
+<p>The name is <span ng-bind="firstName + ' ' + lastName" ></span></p>
+<p>The name is <span ng-bind="person.lastName"></span></p>
+<div ng-init="myCol='blue'">
+     <input style="background-color: {{myCol}}" ng-model="myCol"> 
+        </div>
+    </div>
+
+    
+
+</div>
+</body>
+</html>
