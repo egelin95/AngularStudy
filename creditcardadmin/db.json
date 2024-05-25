@@ -1,0 +1,53 @@
+{
+
+    "creditcards":[
+        {
+            "id":1,
+            "cardName":"Bank of America - Platinum Card",
+            "bankName": "Bank of America",
+            "description":"Bank of America offers customers with variety of options",
+            "maxCredit": 8000,
+            "active": true,
+            "annualFee":0,
+            "interestRate": 13.5,
+            "introOffer":200,
+            "recommendedCreditScore": "600-800",
+            "numberOfApplications": 40,
+            "createdDate": "28-08-2023",
+            "termsAndConditions": "The following conditions are applciable for this card"
+
+        },
+        {
+            "id":2,
+            "cardName":"LHV - Platinum Card",
+            "bankName": "LHV",
+            "description":"LHV offers customers with variety of options",
+            "maxCredit": 8000,
+            "active": true,
+            "annualFee":0,
+            "interestRate": 13.5,
+            "introOffer":200,
+            "recommendedCreditScore": "600-800",
+            "numberOfApplications": 40,
+            "createdDate": "28-08-2023",
+            "termsAndConditions": "The following conditions are applciable for this card"
+
+        },
+        {
+            "id":3,
+            "cardName":"COOP - Platinum Card",
+            "bankName": "COOP Bank",
+            "description":"Coop Bank offers customers with variety of options",
+            "maxCredit": 7000,
+            "active": true,
+            "annualFee":0,
+            "interestRate": 13.5,
+            "introOffer":200,
+            "recommendedCreditScore": "600-800",
+            "numberOfApplications": 40,
+            "createdDate": "28-08-2023",
+            "termsAndConditions": "The following conditions are applciable for this card"
+
+        }
+    ]
+}
