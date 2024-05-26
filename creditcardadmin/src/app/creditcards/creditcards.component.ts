@@ -47,7 +47,49 @@ const TABLE_DATA: CreditCard[] = [
     createdDate: '2024-26-05',
     updatedDate: '2024-26-05'
 
-  }
+  },
+  {id: 2,
+    name: 'Bank of AMerica',
+    description: "Bank of America offers customers with various options",
+    bankName: "Bank of America",
+    maxCredit: 3000,
+    interestRate: 10,
+    active: true,
+    recommendedScore: '700-900',
+    annualFee: 4,
+    termsAndConditions: "Following are the tersm and conditions",
+    createdDate: '2024-26-05',
+    updatedDate: '2024-26-05'
+
+  },
+  {id: 2,
+    name: 'Bank of AMerica',
+    description: "Bank of America offers customers with various options",
+    bankName: "Bank of America",
+    maxCredit: 3000,
+    interestRate: 10,
+    active: true,
+    recommendedScore: '700-900',
+    annualFee: 4,
+    termsAndConditions: "Following are the tersm and conditions",
+    createdDate: '2024-26-05',
+    updatedDate: '2024-26-05'
+
+  },
+  {id: 2,
+    name: 'Bank of AMerica',
+    description: "Bank of America offers customers with various options",
+    bankName: "Bank of America",
+    maxCredit: 3000,
+    interestRate: 10,
+    active: true,
+    recommendedScore: '700-900',
+    annualFee: 4,
+    termsAndConditions: "Following are the tersm and conditions",
+    createdDate: '2024-26-05',
+    updatedDate: '2024-26-05'
+
+  },
 
 
 ]
