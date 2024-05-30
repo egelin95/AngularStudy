@@ -7,7 +7,7 @@
         <form #creditCardForm="ngForm" (ngSubmit)="saveCreditCard()">
            
             <div class="form-group">
-                <mat-form-field>
+                <mat-form-field class="half-width">
                     <label> Name</label>
                     <input matInput placeholder="Input credit card Name" name="name" [(ngModel)]="newCreditCard.name" required minlength="3" maxlength="20">
                     <mat-error *ngIf="creditCardForm.controls['name']?.touched && creditCardForm.controls['name']?.hasError('required')">Name is required</mat-error>
@@ -15,7 +15,7 @@
                     <mat-error *ngIf="creditCardForm.controls['name']?.touched && creditCardForm.controls['name']?.hasError('maxlength')">Name cannot be more than 20 characters.</mat-error>
                 </mat-form-field>
                 
-                <mat-form-field>
+                <mat-form-field  class="half-width">
                     <label> Bank name</label>
                     <input matInput placeholder="Input bank name " name="bankName" [(ngModel)]="newCreditCard.bankName" required minlength="3" maxlength="20">
                     <mat-error *ngIf="creditCardForm.controls['bankName']?.touched && creditCardForm.controls['bankName']?.hasError('required')">Name is required</mat-error>
@@ -24,12 +24,9 @@
                 </mat-form-field>
             </div>
 <div class="form-group">
-    <mat-form-field>
-<textarea matInput required placeholder="Enter Description" name="description" [(ngModel)]="newCreditCard.description">
-<mat-error *ngIf="creditCardForm.controls['description']?.touched && creditCardForm.controls['description']?.hasError('required')">description cannot be more than 20 characters.</mat-error>
-</textarea>
-
-
+    <mat-form-field class="full-width">
+        <textarea matInput placeholder="Enter Description" name="description" [(ngModel)]="newCreditCard.description"  required minlength="3" ></textarea>
+        <mat-error *ngIf="creditCardForm.controls['description']?.touched && creditCardForm.controls['description']?.hasError('required')">Description is required field</mat-error>
     </mat-form-field>
 
 </div>
@@ -53,7 +50,13 @@
         <mat-error *ngIf="creditCardForm.controls['interestRate']?.touched && creditCardForm.controls['interestRate']?.hasError('maxlength')">Interest Rate cannot be more than 20 characters.</mat-error>
     </mat-form-field>
 
-
+    <mat-form-field class="half-width">
+        <label>Annual Fee</label>
+        <input matInput placeholder="Enter Annual Fee" name="annualFee" [(ngModel)]="newCreditCard.annualFee" required minlength="1" maxlength="20">
+        <mat-error *ngIf="creditCardForm.controls['annualFee']?.touched && creditCardForm.controls['annualFee']?.hasError('required')">Annual Fee is required.</mat-error>
+        <mat-error *ngIf="creditCardForm.controls['annualFee']?.touched && creditCardForm.controls['annualFee']?.hasError('minlength')">Annual Fee must have atleast 3 characters.</mat-error>
+        <mat-error *ngIf="creditCardForm.controls['annualFee']?.touched && creditCardForm.controls['annualFee']?.hasError('maxlength')">Annual Fee cannot be more than 20 characters.</mat-error>
+    </mat-form-field>
 
     
 </div>
@@ -74,15 +77,22 @@
         </mat-select>
     </mat-form-field>
 </div>
+
 <div>
-    <mat-form-field class="half-width">
-        <label>Annual Fee</label>
-        <input matInput placeholder="Enter Annual Fee" name="annualFee" [(ngModel)]="newCreditCard.annualFee" required minlength="1" maxlength="20">
-        <mat-error *ngIf="creditCardForm.controls['annualFee']?.touched && creditCardForm.controls['annualFee']?.hasError('required')">Annual Fee is required.</mat-error>
-        <mat-error *ngIf="creditCardForm.controls['annualFee']?.touched && creditCardForm.controls['annualFee']?.hasError('minlength')">Annual Fee must have atleast 3 characters.</mat-error>
-        <mat-error *ngIf="creditCardForm.controls['annualFee']?.touched && creditCardForm.controls['annualFee']?.hasError('maxlength')">Annual Fee cannot be more than 20 characters.</mat-error>
-    </mat-form-field>
-</div>
+<mat-form-field class="half-width">
+    <input matInput required [matDatepicker]="updatedDatePicker" name="updatedDate" [(ngModel)]="newCreditCard.updatedDate" minlength="3" placeholder="Select Date" >
+    <mat-datepicker-toggle matSuffix [for]="updatedDatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #updatedDatePicker></mat-datepicker>
+    <mat-error *ngIf="creditCardForm.controls['updatedDate']?.touched && creditCardForm.controls['updatedDate']?.invalid">Select Updated Date</mat-error>
+</mat-form-field>
+
+<mat-form-field class="half-width">
+    <input matInput required [matDatepicker]="createdDatePicker" name="createdDate" [(ngModel)]="newCreditCard.createdDate" minlength="3" placeholder="Select Date" >
+    <mat-datepicker-toggle matSuffix [for]="createdDatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #createdDatePicker></mat-datepicker>
+    <mat-error *ngIf="creditCardForm.controls['createdDate']?.touched && creditCardForm.controls['createdDate']?.invalid">Select created date</mat-error>
+</mat-form-field></div>
+
 <div class="form group">
     <button mat-raised-button color="primary" [disabled]="!creditCardForm.valid">Add new Credit Card</button>
 </div>
